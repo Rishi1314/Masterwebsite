@@ -6,6 +6,10 @@ import React from "react";
 import mycartoon from "@/images/mycartoon.png"
 import { Spotlight } from "./ui/Spotlight";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import MagicButton from "./MagicButton";
+
+// import { FaLocationArrow } from "react-icons/fa";
+
 const Hero = () => {
     const words = [
         {
@@ -51,10 +55,32 @@ const Hero = () => {
                 />
       </motion.div>
       
-          <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-              <TypewriterEffectSmooth className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8" words={words} />
+          <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4">
+        <TypewriterEffectSmooth className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8" words={words} />
 
       </p>
+      <motion.p 
+        initial={{
+          opacity: 0,
+          y:100
+        }}
+        animate={{
+          opacity:1,
+          y:0
+        }}
+        transition={{
+          duration: 1,
+        }}
+        className="text-xl sm:text-xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
+        Wanna work together? here is <span>
+        <a href="https://drive.google.com/file/d/1j2sxL-gNJj_Cx0mySKfIzcg7ewXnzitq/view?usp=drive_link" target="_blank">
+            <MagicButton
+              title="my Resume"
+              position="right"
+            />
+          </a>
+      </span>
+      </motion.p>
     </div>  )
 }
 
