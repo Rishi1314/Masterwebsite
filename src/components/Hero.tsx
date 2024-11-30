@@ -27,7 +27,7 @@ const Hero = () => {
         },
       ];
   return (
-    <div className="h-[50rem] w-full dark:bg-gray-950 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
+    <div className="h-[50rem] text-center w-full dark:bg-gray-950 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
           {/* Radial gradient for the container to give a faded look */}
           <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
