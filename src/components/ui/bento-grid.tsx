@@ -12,6 +12,7 @@ import { BackgroundGradientAnimation } from "./background-gradient-animation";
 // import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { BackgroundBeams } from "./background-beams";
 
 export const BentoGrid = ({
   className,
@@ -68,7 +69,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "rishirajprof@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -81,14 +82,15 @@ export const BentoGridItem = ({
         className
       )}
       
-      style={id===3?{background:"#FEF9F2",border:"solid 3px grey"}:{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
+      style={id === 4 ? {background:"rgba(254, 139, 38, 0.8)"} :id === 5 ? {background:"rgba(29, 29, 29, 0.97)"}:id===3?{background:"#FEF9F2",border:"solid 3px grey"}:{
         background: "rgb(43,43,43)",
         backgroundColor: "radial-gradient(circle, rgba(43,43,43,1) 65%, rgba(94,94,95,1) 83%, rgba(137,137,138,0.9893207282913166) 100%)"
       }}
     >
       {/* add img divs */}
+      {id===5&&(<BackgroundBeams />
+          )
+          }
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
@@ -141,7 +143,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-          {id === 2 && <div>Test</div>}
+          {id === 2}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -196,6 +198,7 @@ export const BentoGridItem = ({
               />
             </div>
           )}
+         
         </div>
       </div>
     </div>
